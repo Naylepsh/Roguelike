@@ -6,14 +6,14 @@ You're an adventurer trapped deep within dungeon full of hostile creatures. On t
 
 ## Controls
 
-W - Move up
-S - Move down
-A - Move left
-D - Move right
-E - Use item on the floor
-X - Attack nearby enemy
-Z - Sleep
-ESC - Quit
+- W - Move up
+- S - Move down
+- A - Move left
+- D - Move right
+- E - Use item on the floor
+- X - Attack nearby enemy
+- Z - Sleep
+- ESC - Quit
 
 ## Misc.
 
