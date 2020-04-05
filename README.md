@@ -4,6 +4,14 @@
 
 You're an adventurer trapped deep within dungeon full of hostile creatures. On top of that, an unknown curse damages your body with every move you take. Your goal is to survive as long as possible while fending off undead hordes. Or something like that...
 
+## Requirements
+
+Python >=3.6.5
+
+## How To Start
+
+Run `python game.py`
+
 ## Controls
 
 - W - Move up
