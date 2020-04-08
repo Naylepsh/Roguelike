@@ -25,4 +25,10 @@ Run `python game.py`
 
 ## Misc.
 
-Some setting can be changed freely in the `settings.py` file.
+Some settings can be changed freely in the `settings.py` file.
+
+## Screenshots
+
+![](https://i.imgur.com/IhCylJZ.png)
+![](https://i.imgur.com/DvzJabG.png)
+![](https://i.imgur.com/s1ngnYS.png)

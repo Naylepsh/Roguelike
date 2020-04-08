@@ -9,7 +9,8 @@ class Item:
         return self.name + ": Defense = " + str(self.defense) + ", Attack = " + str(self.attack)
 
     def draw(self, graphics, x, y, color):
-        self.fg = graphics.create_text(x, y, text=self.name, fill=color, anchor="w")
+        self.fg = graphics.create_text(
+            x, y, text=self.name, fill=color, anchor="w")
 
     def erase(self, graphics):
         graphics.delete(self.fg)

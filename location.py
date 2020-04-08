@@ -4,6 +4,7 @@ from math import sqrt
 class Location:
     """Location class contains x, y, z coordinates
        and methods to manipulate them"""
+
     def __init__(self, x, y=0, z=0):
         self.x = x
         self.y = y

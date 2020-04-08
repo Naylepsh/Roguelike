@@ -24,7 +24,8 @@ class Tile(ABC):
 
 class Downstairs(Tile):
     def __init__(self, location):
-        Tile.__init__(self, location, interactive=True, accessible=True, allows_spawn=False, visible=False)
+        Tile.__init__(self, location, interactive=True,
+                      accessible=True, allows_spawn=False, visible=False)
         self.bg = None
         self.fg = None
 
@@ -52,7 +53,8 @@ class Downstairs(Tile):
 
 class Upstairs(Tile):
     def __init__(self, location):
-        Tile.__init__(self, location, interactive=True, accessible=True, allows_spawn=False, visible=False)
+        Tile.__init__(self, location, interactive=True,
+                      accessible=True, allows_spawn=False, visible=False)
         self.bg = None
         self.fg = None
 
@@ -80,7 +82,8 @@ class Upstairs(Tile):
 
 class Wall(Tile):
     def __init__(self, location):
-        Tile.__init__(self, location, interactive=False, accessible=False, allows_spawn=False, visible=False)
+        Tile.__init__(self, location, interactive=False,
+                      accessible=False, allows_spawn=False, visible=False)
         self.bg = None
         self.fg = None
 
@@ -104,7 +107,8 @@ class Wall(Tile):
 
 class Floor(Tile):
     def __init__(self, location):
-        Tile.__init__(self, location, interactive=False, accessible=True, allows_spawn=True, visible=False)
+        Tile.__init__(self, location, interactive=False,
+                      accessible=True, allows_spawn=True, visible=False)
         self.bg = None
         self.fg = None
 
@@ -178,7 +182,8 @@ class Floor(Tile):
 
 class Fountain(Tile):
     def __init__(self, location):
-        Tile.__init__(self, location, interactive=True, accessible=True, allows_spawn=False, visible=False)
+        Tile.__init__(self, location, interactive=True,
+                      accessible=True, allows_spawn=False, visible=False)
         self.health_restored = 50
         self.active = True
         self.bg = None
@@ -212,6 +217,7 @@ class Fountain(Tile):
 class Level:
     """class Level is a 2D array of tiles and some methods
     initialize their values in 'unique' ways and draw them"""
+
     def __init__(self, tiles_x, tiles_y, starting_location):
         self.tiles = []
         self.tiles_x = tiles_x
@@ -227,14 +233,15 @@ class Level:
         for all possible tiles, if tile hasn't been traveled to then turn it into a wall"""
 
         # initialize traveled_locations
-        traveled_locations = [[False for _ in range(self.tiles_y)] for _ in range(self.tiles_x)]
+        traveled_locations = [[False for _ in range(
+            self.tiles_y)] for _ in range(self.tiles_x)]
         x, y, _ = starting_location.get_xyz()  # removing z-coordinate
         traveled_locations[x][y] = True
 
         # creating basic layout
         for i in range(LEVEL_CREATION_ITER):
             dist = self.rand_dist()
-            for k in range(dist[2]):
+            for _ in range(dist[2]):
                 if 1 <= x + dist[0] < self.tiles_x - 1 and 1 <= y + dist[1] < self.tiles_y - 1:
                     traveled_locations[x][y] = True
                     if dist[0] != 0:
